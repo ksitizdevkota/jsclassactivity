@@ -1,0 +1,16 @@
+{
+	"result": {
+		"ok": 1,
+		"n": 1
+	},
+	"ops": [
+		{
+			"name": "Buy Apples",
+			"_id": "5dd7a1327a69c9087ca29477"
+		}
+	],
+	"insertedCount": 1,
+	"insertedIds": [
+		"5dd7a1327a69c9087ca29477"
+	]
+}

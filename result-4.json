@@ -1,0 +1,21 @@
+{
+	"result": {
+		"ok": 1,
+		"n": 1
+	},
+	"ops": [
+		{
+			"name": "Sam",
+			"age": 17,
+			"addresses": [
+				"KTM",
+				"Pokhara"
+			],
+			"_id": "5dd7a51e7a69c9087ca2947c"
+		}
+	],
+	"insertedCount": 1,
+	"insertedIds": [
+		"5dd7a51e7a69c9087ca2947c"
+	]
+}

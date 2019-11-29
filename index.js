@@ -1,29 +1,15 @@
 const express = require('express'); //import
+const mongoose= require ('mongoose'); //impoeting mongoose
+const taskRouter=require('./routes/tasks');
 
-const app = express(); //creating an instant
+mongoose.connect('mongodb://127.0.0.1/test',{useNewUrlParser:true, useUnifiedTopology: true})
+.then ((db)=> {
+console.log("Successfully connected mongodb server");
+})  //connecting mongoose, url/name of db
 
-app.get('/tasks', function(req, res){
-    res.send("Send all tasks");
-});
-
-app.post('/tasks',(req, res) => {
-    res.send("Create a new task");
-});
-
-app.put('/tasks', (req, res) =>{
-    res.send("Not supported");
-
-});
-
-app.delete ('/tasks',(req, res)=>{
-    res.send ("Delete all Tasks");
-});
-
-app.get('/tasks/:id', function (req, res) // '/'-> route ,  
-{
-   //console.log(req.headers);
-    res.send(`Send a task with ${req.params.id}`);
-});
+const app = express(); //creating an instant//
+app.use(express.json()); //request bata aako data lai server ma pass garcha (decode)//
+app.use('/tasks',taskRouter);
 
 app.listen(3000, () =>// app.listen-> run other apps 
 {

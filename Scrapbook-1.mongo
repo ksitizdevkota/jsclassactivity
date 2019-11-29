@@ -1,0 +1,7 @@
+db.tasks.insert({name:"Buy Apples"});
+db.tasks.insert({name:"Raj Bahadur"});
+db.tasks.find();
+db.tasks.findOne();
+db.tasks.deleteOne({name:"Raj Bahadur"});
+
+db.users.insert({name:"Sam",age: 17, addresses:["KTM","Pokhara"]});
